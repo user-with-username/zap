@@ -6,9 +6,8 @@ on:
 
 permissions:
   contents: write
-  packages: write
   pull-requests: write
- 
+
 jobs:
   publish:
     if: |
@@ -18,7 +17,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
+          fetch-depth: 0
 
       - name: Install crow
         uses: user-with-username/setup-crow@main
@@ -26,4 +26,4 @@ jobs:
       - name: Run crow publish
         run: crow publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
