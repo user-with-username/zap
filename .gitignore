@@ -7,3 +7,4 @@ target/
 *.dylib
 *.dll
 .DS_Store
+.cache
