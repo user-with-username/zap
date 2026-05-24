@@ -36,5 +36,5 @@ jobs:
             echo "No changes after formatting"
           else
             git commit -m "style: format with crow fmt [skip ci]"
-            git push origin dev
+            git push origin main
           fi
