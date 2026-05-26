@@ -1,6 +1,6 @@
 # zap
 
-A lightweight C++ HTTP framework — single header, zero fuss
+A lightweight C++ HTTP framework — just single header
 
 ## Quick Start
 
